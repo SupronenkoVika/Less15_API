@@ -18,7 +18,7 @@ namespace Less15_API
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
-            services.Configure<ServerSettings>(Configuration.GetSection("GeneralSettings"));
+            services.AddServerSettings(Configuration);
             services.AddHealthChecks();
             services.AddTransient<RoomServise>();
         }
